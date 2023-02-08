@@ -6,25 +6,25 @@ export default function Pricing() {
   return (
     // Main Box Container starts 
     <Box 
-    w={'994px'} 
-    h={'319px'} 
+    maxW={'994px'} 
+    // h={'319px'} 
     mt={'-150px'} 
-    mx="auto" 
+    mx={{ base: "20px", lg: "auto"}} 
     bg={'white'} 
     borderRadius={'12px'} 
     overflow={'hidden'} 
-    boxShadow={'0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04)'}
+    boxShadow={'2xl'}
     >
-        <Flex>
+        <Flex direction={{ base: "column", md: "column", lg: "row" }}>
             {/* Left Box */}
-            <Box w={'378px'} bg={'#652cd32e'} p="48px" textAlign={'center'}>
+            <Box bg={'#652cd32e'} p="48px" textAlign={'center'}>
                 <Text fontWeight={'bold'} fontSize={'24px'}>Premium PRO</Text>
                 <Heading mt={'16px'} fontSize={'60px'}>$329</Heading>
                 <Text mt={'8px'} fontSize={'18px'}>billed just once</Text>
                 <Button w={'282px'} mt={'24px'} bg={'#805AD5'} color={'white'}>Get Started</Button>
             </Box>
             {/* Right Box */}
-            <Box w={'616px'} p="48px">
+            <Box p="48px">
                 <Text mb={'8px'}>Access these features when you get this pricing package for your business.</Text>
                 <HStack mt={'16px'}>
                     <Icon as={checkMarkIcon}></Icon>
